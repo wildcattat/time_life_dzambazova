@@ -35,7 +35,7 @@ $('li.green').on("click", function (){
     $('.MainWrap').find('img').hide();  
     $('#Geo').show();
     // to minimize the nav bar on click
-    $('.filters').addClass ('navMin');
+    $('.filters').addClass('navMin');
     $('h1').hide();
 
 });
@@ -55,7 +55,7 @@ $('li.lightgreen').on("click", function (){
 // the below is to make the nav menu minimize and maximize on hover.  it works but i have to figure out how to make it maximize only when hovering over the small minimized portion of it as now it maximisez when i am anywhere in teh proximity which is not what i want
 
 
-$('.filters').hover(function(){
+$('.filters li').on('mouseenter', function(){
     $('.filters').removeClass('navMin');
 });
 

@@ -3,15 +3,18 @@ $('.filters').hide();
 $('#year1965').hide();
 $('#year2016').hide();
 $('.TanjaImage').fadeIn(1000);
+$('a.resumebutton').hide();
 
 
 
 // define the behaviour when clicking the start image: on a click i want the picture to move up and gets smaller, th enav menu to show up and the years to show
 $('div.start').one('click', function (){
     $('img.TanjaImage').toggleClass('TanjaImageSmall');
-    $("h1").animate({"font-size":"20px"});
+    $("h1").animate({"font-size":"15px"});
+    $('h1').addClass('animatedh1');
     $('.filters').fadeIn(1000);
     $('#year1965, #year2016').fadeIn(1000);
+
 });
 
 
@@ -37,6 +40,7 @@ $('li.green').on("click", function (){
     // to minimize the nav bar on click
     $('.filters').addClass('navMin');
     $('h1').hide();
+    $('p.resumebutton').hide();
 
 });
 
@@ -47,6 +51,18 @@ $('li.lightgreen').on("click", function (){
     // minimize the nav bar
     $('.filters').addClass('navMin');
     $('h1').hide();
+
+
+});
+
+$('li.darkgreen').on("click", function (){
+    // With the line below i want to delete any previous image - so i want a syntax that says hide any existing image (any siblings) so to put a new one in th enext line
+    $('.MainWrap').find('img').hide();
+    $('#Work').show();
+    // minimize the nav bar
+    $('.filters').addClass('navMin');
+    $('h1').hide();
+    $('a.resumebutton').show();
 
 });
 

@@ -36,7 +36,12 @@ h1 {
     color:  white;
     text-align: center;
     opacity:  1;
+    transition: all .2s ease-in-out;
 
+}
+
+.animatedh1 {
+    transform: translateY(-210px)
 }
 
 .fade {
@@ -67,9 +72,11 @@ div.start {
 }
 
 .TanjaImageSmall {
-    height: 100px;
-    width:  100px;
+    height: 60px;
+    width:  60px;
     transform: translateY(-200px);
+    /* border: solid grey 0.5px; */
+    /* border-radius: 50%; */
 
     /* transform: scale(0.5,0.5); */
     /* padding-top: 100px; */
@@ -108,7 +115,7 @@ nav ul {
 .MainWrap {
     z-index: -1;
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 70px;
     right: 70px;
     /* border: white solid; */
@@ -135,6 +142,10 @@ nav ul {
     z-index: 2;
 }
 
+#Work {
+    width: 150%;
+    z-index: 2;
+}
 
 
 li {
@@ -148,7 +159,7 @@ li {
     background-color: #FFFF9D;
     border-bottom: 1px solid #e5e58d;
 }
-.blue {
+.darkgreen {
     background-color: #00A388;
 }
 .green {
@@ -223,6 +234,19 @@ li {
 
 /* IMAGE MAPS */
 
+.resumebutton {
+    font-size: 10px;
+    color: white;
+    background-color: #00A388;
+    /* border: solid 1px; */
+    padding: 2px;
+    /* border-radius: 50%; */
+    z-index: 30;
+    position: absolute;
+    top: 90px;
+    left: 960px;
+    text-decoration: none;
+}
 
 
 

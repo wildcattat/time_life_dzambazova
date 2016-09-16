@@ -1,9 +1,29 @@
+
+// var kkeys = [];
+// var konami = "38,38,40,40,37,39,37,39,66,65";
+
+// $(document).keydown(function(e) {
+//   kkeys.push( e.keyCode );
+//   if ( kkeys.toString().indexOf( konami ) >= 0 ){
+//     $(document).unbind('keydown',arguments.callee);
+    
+//     // Add your own easter egg here!!
+
+// setInterval(function () {
+//     $('.Boss').toggleClass('Bossjumping');
+// }, 3000);
+
+//   }
+// });
+
+
 // make all images and menus i need invisible so they can Fadein later. ( i tried opacity, it doesnt work on all use cases)
 $('.filters').hide();
 $('#year1965').hide();
 $('#year2016').hide();
 $('.TanjaImage').fadeIn(1000);
 $('a.resumebutton').hide();
+$('.Boss').hide();
 
 
 
@@ -39,8 +59,9 @@ $('li.green').on("click", function (){
     $('#Geo').show();
     // to minimize the nav bar on click
     $('.filters').addClass('navMin');
-    $('h1').hide();
+    // $('h1').hide();
     $('p.resumebutton').hide();
+
 
 });
 
@@ -50,7 +71,7 @@ $('li.lightgreen').on("click", function (){
     $('#People').show();
     // minimize the nav bar
     $('.filters').addClass('navMin');
-    $('h1').hide();
+    // $('h1').hide();
 
 
 });
@@ -61,7 +82,7 @@ $('li.darkgreen').on("click", function (){
     $('#Work').show();
     // minimize the nav bar
     $('.filters').addClass('navMin');
-    $('h1').hide();
+    // $('h1').hide();
     $('a.resumebutton').show();
 
 });
@@ -73,6 +94,7 @@ $('li.darkgreen').on("click", function (){
 
 $('.filters li').on('mouseenter', function(){
     $('.filters').removeClass('navMin');
+    // $('.MainWrap').addClass('opacity50');
 });
 
 // $('.filters').hover(function(){

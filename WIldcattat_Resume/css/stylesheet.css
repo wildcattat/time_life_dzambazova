@@ -1,0 +1,132 @@
+
+body {
+	color: rgb(128,128,128);
+	font-size: 25px;
+	background-color: white;
+	padding-left: 10px;
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	/*text-decoration: none;*/
+	padding-left: 0px;
+	font-weight: 400;
+	color: #474842;
+	/*color: grey;*/
+	font-size: 48px;
+	margin-bottom: 0px;
+}
+nav a {
+	text-decoration: none;
+	font-weight: 300;
+	color: white;
+	font-size: 32px;
+	padding-right: 24px;
+}
+
+h2 {
+	/*float: top;*/
+	font-weight: 250;
+	color: rgba(26,82,101,0.7);
+	font-size: 100px;
+	margin-bottom: 10px;
+}
+h3 {
+	color: white;
+	font-size: 23px;
+	/*padding-left: 45px;*/
+	font-family: 'Oswald';
+	font-weight: lighter;
+}
+
+p {
+	color: white;
+	font-size: 18px;
+	font-family: 'Oswald';
+	font-weight: lighter;
+	background-color: grey;
+	margin-left: 200px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+p a {
+	text-decoration: none;
+	color: darkgrey;
+	font-weight: bolder;
+}
+
+span.dropcap
+{
+		float: left; 
+		color: #D8D8D8;
+		font-size: 100px; 
+		line-height: 60px; 
+		padding-top: 18px; 
+		padding-right: 8px; 
+		padding-left: 3px; 
+		padding-bottom: 10px;
+		font-family: 'Oswald';
+}
+
+ul {
+	list-style-type: none;
+	margin-left: 200px;
+	padding-top: 20px;
+	background-color: rgba(0,0,0,0.6);
+	margin-top: 50px;
+}
+
+#tdimage {
+	float: right;
+	position: absolute;
+	right: 100px;
+	padding-right:50px;
+}
+#tdtext {
+	float: left;
+	position: static;
+	width: 100%;
+	padding-top: 50px;
+	padding-left: 100px;
+	margin-right: 100px;
+	padding-bottom: 67px;
+	background-color: rgba(233, 174, 45, 0.7);
+	z-index: -1;
+}
+.randombox {
+	position: absolute;
+	right: 600px;
+	top: 160px;
+	bottom: 0px;
+	left: 100px;
+	background-color: rgba(161,226,36,0.6);
+	z-index: -1;
+
+}
+
+.randombox2 {
+	position: absolute;
+	right: 300px;
+	top: 100px;
+	bottom: 0px;
+	left: 600px;
+	background-color: rgba(29,135,131,0.8);
+	z-index: -1;
+
+}
+.e {
+	color: orange;
+	font-size: 85%;
+}
+.s {
+	font-size: 70%;
+}
+
+#descriptions {
+	padding-top: 10px;
+	padding-right: 100px;
+}
+
+

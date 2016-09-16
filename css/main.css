@@ -85,6 +85,7 @@ div.start {
 /* This is the Nav menu called filters */
 
 .filters {
+    display: none;
     opacity: 1;
     float: left;
     left: 50%;
@@ -115,6 +116,7 @@ nav ul {
 
 
 .MainWrap {
+    display: none;
     z-index: -1;
     position: absolute;
     top: 150px;
@@ -127,6 +129,9 @@ nav ul {
     width: 70%;
     height: 60%;
 
+}
+.imagewrap {
+    position: relative;
 }
 
 #Geo {
@@ -149,6 +154,37 @@ nav ul {
     z-index: 2;
 }
 
+#ArtsCrafts {
+    width: 150%;
+    z-index: 2;
+}
+.Skopje {
+    width: 40%;
+    height: 30%;
+    border: solid green;
+}
+
+.expandedSkopje {
+/*     float: left;
+    margin: auto;
+    z-index: 40;
+    position: relative;
+    display: block;
+    width: 800px;
+    top: 400px; */
+    cursor: pointer;
+    width:160px;
+    height:110px;
+    border:0;
+    position: absolute;
+    top: 203px;
+    left: 160px;
+}
+
+.SkopjeText {
+    color: white;
+    font-size: 60px;
+}
 
 li {
       margin: 10px;
@@ -257,21 +293,43 @@ li {
 }
 
 .Boss {
-    opacity: 1;
-    position: absolute;
+    display: none;
+    /* position: absolute; */
     height: 30%;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
+    transition: all .3s ease-in-out;
 }
 
 .Bossjumping {
+    display: block;
+   z-index: 20;
     opacity: 1;
-    transform:  rotate(360deg) translateX(100px) translateY(200px)
+    transform: rotate(360deg) translateX(100px) translateY(200px)
+
 }
 
 
 
+.modal {
+    position: absolute;
+    width: 80%;
+    z-index: 75;
+    top: 10%;
+    background-color: white;
+    padding: 20px;
+    display: none;
+}
+
+.modal img {
+    max-width: 100%;
+    width: 50%;
+}
 
 
+
+/* .close {
+    display: none;
+} */
 
 
 

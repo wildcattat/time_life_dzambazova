@@ -8,10 +8,10 @@ $(document).keydown(function(e) {
     $(document).unbind('keydown',arguments.callee);
     
     // Add your own easter egg here!!
-    // console.log('this works')
+    console.log('this works')
     setInterval(function () {
         $('.Boss').addClass('Bossjumping');
-    }, 300);
+    }, 1000);
 
 }
 });
@@ -73,7 +73,7 @@ $('li.lightgreen').on("click", function (){
     $('#People').show();
     // minimize the nav bar
     $('.filters').addClass('navMin');
-    
+
 
 
 });

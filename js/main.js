@@ -1,31 +1,11 @@
 
-var kkeys = [];
-var konami = "38,38,40,40,37,39,37,39,66,65";
-
-$(document).keydown(function(e) {
-  kkeys.push( e.keyCode );
-  if ( kkeys.toString().indexOf( konami ) >= 0 ){
-    $(document).unbind('keydown',arguments.callee);
-    
-    // Add your own easter egg here!!
-    console.log('this works')
-    setInterval(function () {
-        $('.Boss').addClass('Bossjumping');
-    }, 1000);
-
-}
-});
-
-
 // make all images and menus i need invisible so they can Fadein later. ( i tried opacity, it doesnt work on all use cases)
 // $('.filters').hide();
 $('#year1965').hide();
 $('#year2016').hide();
 $('.TanjaImage').fadeIn(1000);
 $('a.resumebutton').hide();
-// $('.Boss').hide();
-
-
+$('.Boss').hide();
 
 // define the behaviour when clicking the start image: on a click i want the picture to move up and gets smaller, th enav menu to show up and the years to show
 $('div.start').one('click', function (){
@@ -50,6 +30,23 @@ $("#js-rotating").Morphext({
     complete: function () {
         // Called after the entrance animation is executed.
     }
+});
+
+var kkeys = [];
+var konami = "38,38,40,40,37,39,37,39,66,65";
+
+$(document).keydown(function(e) {
+  kkeys.push( e.keyCode );
+  if ( kkeys.toString().indexOf( konami ) >= 0 ){
+    $(document).unbind('keydown',arguments.callee);
+    
+    // Add your own easter egg here!!
+    // console.log('this works');
+    setInterval(function () {
+
+        $('.Boss').toggleClass('Bossjumping');
+        $('.Bossjumping').fadeIn();
+    }, 2000);}
 });
 
 // on click of the nav tabs, different timeline images should appear and the previous image should dissapear
@@ -121,11 +118,13 @@ $('.imagewrap a').on("click", function (e){
 
 // the above will repeat from all Timeline filters
 
-// the below is to make the nav menu minimize and maximize on hover.  it works but i have to figure out how to make it maximize only when hovering over the small minimized portion of it as now it maximisez when i am anywhere in teh proximity which is not what i want
 
-$('.close').on('mouseenter', function(){
-    $('div').removeClass();
+$('.close').on('click', function(){
+    $('div.modal').hide();
+    console.log('this works');
 });
+
+// the below is to make the nav menu minimize and maximize on hover.  it works but i have to figure out how to make it maximize only when hovering over the small minimized portion of it as now it maximisez when i am anywhere in teh proximity which is not what i want
 
 $('.filters li').on('mouseenter', function(){
     $('.filters').removeClass('navMin');
@@ -148,3 +147,6 @@ var geographyInfo = {
 
 console.log(geographyInfo.people);
 // this will be the section of Image maps - when click on different image maps in the images, they should open separately and i need an X sign to be able to minimize them. have =nt yet started that
+
+
+

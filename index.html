@@ -59,7 +59,9 @@
               <div class='imagewrap'>
                  <img style="display: none" id='Geo' class='green' src='img/Geo_w.png' alt='Geography'>
                   <!-- <a href="https://en.wikipedia.org/wiki/Skopje" style="width:160px; height:110px; border:0; background-color: blue; position: absolute; top: 203px; left: 160px;"></a> -->
-                 <a class='expandedSkopje' href="#" data-info="skopje"></a>
+                 <a class='Skopje' href="#" data-info="skopje"></a>
+                  <a class='Vienna' href="#" data-info="vienna"></a>
+
                  <img style="display: none" id='People' class='lightgreen' src='img/People.png' alt='People'>
                  <img style="display: none" id='ArtsCrafts' class='orange' src='img/ArtsCrafts.png' alt='ArtsCrafts'>
                  <img style="display: none" id='Publications' class='yellow' src='img/Publications.png' alt='Publications'>
@@ -86,16 +88,19 @@
               </p>
           </div> -->
 
-          <!-- <img id='year2016' src='img/2016.png' alt='2016'> -->
+       
     
           <div class="overlay-background"></div>
           <div class='modal'>
           </div>
 
+          <!-- handlebar teplate -->
+
         <script id="modal-template" type="text/x-handlebars-template">
           <a class='close' href="">X</a>
           <img src="{{src}}" alt="">
-          <p>{{text}}</p>
+          <p class='modaltext'>{{text}}</p>
+          <a class='address' href=""Address></a>
         </script>
 
 

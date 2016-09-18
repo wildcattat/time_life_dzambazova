@@ -158,20 +158,10 @@ nav ul {
     width: 150%;
     z-index: 2;
 }
-.Skopje {
-    width: 40%;
-    height: 30%;
-    border: solid green;
-}
 
-.expandedSkopje {
-/*     float: left;
-    margin: auto;
-    z-index: 40;
-    position: relative;
-    display: block;
-    width: 800px;
-    top: 400px; */
+/* GEOGRAPHY _ CITIES */
+
+.Skopje {
     cursor: pointer;
     width:160px;
     height:110px;
@@ -181,10 +171,20 @@ nav ul {
     left: 160px;
 }
 
-.SkopjeText {
+.Vienna {
+    cursor: pointer;
+    width:200px;
+    height:150px;
+    border:0;
+    position: absolute;
+    top: 236px;
+    left: 600px;
+}
+
+/* .SkopjeText {
     color: white;
     font-size: 60px;
-}
+} */
 
 li {
       margin: 10px;
@@ -293,7 +293,7 @@ li {
 }
 
 .Boss {
-    /* display: none; */
+    display: none;
     text-align: center;
     position: absolute;
     margin-left: 480px;
@@ -310,28 +310,45 @@ li {
 
 }
 
-
-
 .modal {
     position: absolute;
-    width: 80%;
+    width: 38%;
     z-index: 75;
-    top: 10%;
+    top: 130px;
     background-color: white;
+    margin-left: 15%;
+    /* margin5-top: 20%; */
     padding: 20px;
     display: none;
 }
 
-.modal img {
-    max-width: 100%;
-    width: 50%;
+.overlay-background {
+    background-color: darkgrey;
+    opacity: 0.3;
+    z-index: 20;
 }
 
+.modal img {
+    max-width: 100%;
+    width: 90%;
+    
+}
 
-
-/* .close {
-    display: none;
+/* .modaltext p {
+    float:  left;
 } */
+
+.close {
+    position: absolute;
+    cursor:pointer;
+    font-weight: bold;
+    color: white;
+    background: grey;
+    padding: 10px;
+    text-decoration: none;
+    top: 20px;
+    right: 10px;
+}
 
 
 

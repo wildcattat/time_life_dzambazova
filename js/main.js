@@ -104,15 +104,16 @@ $('li.orange').on("click", function (){
 
 $('.imagewrap a').on("click", function (e){
     e.preventDefault();
+    
     var info = $(this).attr('data-info');
     var context = geographyInfo[info];
     // $('.Skopje').addClass('expandedSkopje');
-
-
     var source   = $("#modal-template").html();
     var template = Handlebars.compile(source);
     var htmlToInsert    = template(context);
 
+    
+    $('.imagewrap').addClass('overlay-background');
     $('.modal').html(htmlToInsert);
 
     $('.modal').fadeIn();
@@ -123,8 +124,7 @@ $('.imagewrap a').on("click", function (e){
 // the below is to make the nav menu minimize and maximize on hover.  it works but i have to figure out how to make it maximize only when hovering over the small minimized portion of it as now it maximisez when i am anywhere in teh proximity which is not what i want
 
 $('.close').on('mouseenter', function(){
-    $('#modal-template').hide();
-    // $('.MainWrap').addClass('opacity50');
+    $('div').removeClass();
 });
 
 $('.filters li').on('mouseenter', function(){
@@ -136,11 +136,12 @@ $('.filters li').on('mouseenter', function(){
 var geographyInfo = {
     skopje: {
         src: 'img/Skopje.jpg',
-        text: 'Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...'
+        text: 'Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...',
+        address: 'https://goo.gl/maps/XqqpJYzqXwT2'
     },
     people: {
         src: 'img/Skopje.jpg',
-        text: 'Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...'
+        text: 'Skopje used to be a pretty '
     }
 }
 

@@ -142,7 +142,8 @@ var imageInfo = {
     skopje: {
         src: 'img/Skopje.jpg',
         text: 'Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...',
-        address: 'https://goo.gl/maps/XqqpJYzqXwT2'
+        hyperlink: 'https://goo.gl/maps/XqqpJYzqXwT2',
+        hyperlinkText: 'Hello'
     },
     
     Vienna: {

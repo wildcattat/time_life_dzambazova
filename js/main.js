@@ -4,7 +4,7 @@
 // $('#year1965').hide();
 // $('#year2016').hide();
 $('.TanjaImage').fadeIn(1000);
-$('.Boss').hide();
+// $('.Boss').hide();
 
 // define the behaviour when clicking the start image: on a click i want the picture to move up and gets smaller, th enav menu to show up and the years to show
 $('div.start').one('click', function (){
@@ -40,10 +40,11 @@ $(document).keydown(function(e) {
     $(document).unbind('keydown',arguments.callee);
     
     // Add your own easter egg here!!
-
+    $('.Bossjumping').fadeIn();
+    $('.Boss').toggleClass('Bossjumping');
+    
     setInterval(function () {
         $('.Boss').toggleClass('Bossjumping');
-        $('.Bossjumping').fadeIn();
     }, 2000);}
 });
 

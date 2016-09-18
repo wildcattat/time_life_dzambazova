@@ -335,7 +335,7 @@ a.resumebutton {
 
 .Bossjumping {
     z-index: 150;
-    display: block;
+    display: none;
     position: absolute;
     text-align: center;
     transform: rotate(1800deg)

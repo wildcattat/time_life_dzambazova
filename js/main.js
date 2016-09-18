@@ -1,10 +1,9 @@
 
 // make all images and menus i need invisible so they can Fadein later. ( i tried opacity, it doesnt work on all use cases)
 // $('.filters').hide();
-$('#year1965').hide();
-$('#year2016').hide();
+// $('#year1965').hide();
+// $('#year2016').hide();
 $('.TanjaImage').fadeIn(1000);
-$('a.resumebutton').hide();
 $('.Boss').hide();
 
 // define the behaviour when clicking the start image: on a click i want the picture to move up and gets smaller, th enav menu to show up and the years to show
@@ -41,14 +40,17 @@ $(document).keydown(function(e) {
     $(document).unbind('keydown',arguments.callee);
     
     // Add your own easter egg here!!
-    // console.log('this works');
-    setInterval(function () {
 
+    setInterval(function () {
         $('.Boss').toggleClass('Bossjumping');
         $('.Bossjumping').fadeIn();
     }, 2000);}
 });
 
+$('.Boss').on('click', function(){
+    $('.Bossjumping').fadeOut();
+    $('.Boss').fadeOut();
+});
 // on click of the nav tabs, different timeline images should appear and the previous image should dissapear
 
 $('li.green').on("click", function (){
@@ -58,7 +60,8 @@ $('li.green').on("click", function (){
     $('#Geo').show();
     // to minimize the nav bar on click
     $('.filters').addClass('navMin');
-    $('p.resumebutton').hide();
+    // $('p.resumebutton').hide();
+    $('a.resumebutton').hide();
 
 
 });
@@ -70,6 +73,7 @@ $('li.lightgreen').on("click", function (){
     $('#People').show();
     // minimize the nav bar
     $('.filters').addClass('navMin');
+    $('a.resumebutton').hide();
 
 
 
@@ -103,8 +107,8 @@ $('.imagewrap a').on("click", function (e){
     e.preventDefault();
     
     var info = $(this).attr('data-info');
-    var context = geographyInfo[info];
-    // $('.Skopje').addClass('expandedSkopje');
+
+    var context = imageInfo[info];
     var source   = $("#modal-template").html();
     var template = Handlebars.compile(source);
     var htmlToInsert    = template(context);
@@ -112,15 +116,15 @@ $('.imagewrap a').on("click", function (e){
     
     $('.imagewrap').addClass('overlay-background');
     $('.modal').html(htmlToInsert);
-
     $('.modal').fadeIn();
 });
 
 // the above will repeat from all Timeline filters
 
 
-$('.close').on('click', function(){
-    $('div.modal').hide();
+$('a.close').on('mouseenter', function(){
+    $('this').htmlToHide();
+    // $('.modal').html(htmlToHide);
     console.log('this works');
 });
 
@@ -132,15 +136,29 @@ $('.filters li').on('mouseenter', function(){
 });
 
 
-var geographyInfo = {
+var imageInfo = {
     skopje: {
         src: 'img/Skopje.jpg',
         text: 'Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...',
         address: 'https://goo.gl/maps/XqqpJYzqXwT2'
     },
-    people: {
-        src: 'img/Skopje.jpg',
-        text: 'Skopje used to be a pretty '
+    
+    Vienna: {
+        src: 'img/Vienna.jpg',
+        text: 'Ultravox...ah, Vienna '
+    },
+
+    London: {
+        src: 'img/London.jpg',
+        text: 'Battersea Power Station forever '
+    },
+    Paris: {
+        src: 'img/Paris.jpg',
+        text: 'Paris, i will see you again!'
+    },
+     SanFrancisco: {
+        src: 'img/SanFrancisco.jpg',
+        text: 'San Francisco, you city of contrasts!'
     }
 }
 

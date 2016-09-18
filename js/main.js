@@ -54,10 +54,10 @@ $('.Boss').on('click', function(){
 // on click of the nav tabs, different timeline images should appear and the previous image should dissapear
 
 $('li.green').on("click", function (){
-    $('.MainWrap').find('img').hide();
+    $('.imagewrap').hide();
     // the line below is to avoid th eslider showing
     $('.MainWrap').show();  
-    $('#Geo').show();
+    $('#geowrap').show();
     // to minimize the nav bar on click
     $('.filters').addClass('navMin');
     // $('p.resumebutton').hide();
@@ -81,9 +81,10 @@ $('li.lightgreen').on("click", function (){
 
 $('li.darkgreen').on("click", function (){
     // With the line below i want to delete any previous image - so i want a syntax that says hide any existing image (any siblings) so to put a new one in th enext line
-    $('.MainWrap').find('img').hide();
+    $('.imagewrap').hide();
+    // $('.MainWrap').find('img').hide();
     $('.MainWrap').show(); 
-    $('#Work').show();
+    $('#workwrap').show();
     // minimize the nav bar
     $('.filters').addClass('navMin');
     // $('h1').hide();
@@ -93,7 +94,7 @@ $('li.darkgreen').on("click", function (){
 
 $('li.orange').on("click", function (){
     // With the line below i want to delete any previous image - so i want a syntax that says hide any existing image (any siblings) so to put a new one in th enext line
-    $('.MainWrap').find('img').hide();
+    // $('.MainWrap').find('img').hide();
     $('.MainWrap').show(); 
     $('#ArtsCrafts').show();
     // minimize the nav bar
@@ -122,8 +123,9 @@ $('.imagewrap a').on("click", function (e){
 // the above will repeat from all Timeline filters
 
 
-$('a.close').on('mouseenter', function(){
-    $('this').htmlToHide();
+$('.modal').on('click', '.close', function(e){
+    e.preventDefault();
+    $('.modal').fadeOut();
     // $('.modal').html(htmlToHide);
     console.log('this works');
 });
@@ -163,7 +165,7 @@ var imageInfo = {
 }
 
 
-console.log(geographyInfo.people);
+// console.log(geographyInfo.people);
 // this will be the section of Image maps - when click on different image maps in the images, they should open separately and i need an X sign to be able to minimize them. have =nt yet started that
 
 

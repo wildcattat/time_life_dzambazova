@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <!-- Place favicon.ico in the root directory -->
   <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
 
@@ -15,36 +16,37 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <!-- TD: this is for animating text -->
+
+  <!-- TD: this is bower library for animating text -->
   <link rel="stylesheet" href="css/bower_components/Morphext/dist/morphext.css">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 
 </head>
 
-
-
 <body>
-
-  <div>
-    <img class='Boss Bossjumping' src='img/Boss.png' alt='Boss'>
-  </div>
-
 
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
 
             <!-- Add your site or application content here -->
+
+ <!-- konamicode -->
+  <div>
+    <img class='Boss Bossjumping' src='img/Boss.png' alt='Boss'>
+    <audio src="img/burlesque.mp3" autoplay></audio>
+  </div>
+
+
+<!-- start animation -->
+
             <div class='start'>
               <img class='TanjaImage' src="img/Tanja.png" alt="Tanja_Scanned" height="200" width="200">
               <h1>MY TIMELI<span id="js-rotating">N,F</span>E</h1>
             </div>
 
-
-            <!-- <a href="#">RESUME</a> -->
-
-
+<!-- navbar -->
 
             <div class='filters'>
               <nav>
@@ -52,62 +54,74 @@
                   <li class='green'>Geography</li>
                   <li class='lightgreen'>People</li>
                   <li class='orange'>ArtsCrafts</li>
-                  <li class='yellow'>Arts+Crafts</li>
+                  <li class='yellow'>Animals</li>
                   <li class='darkgreen'>Work</li>
                   <li class='red'>Pubs+Talks</li>
                 </ul>
               </nav>
             </div>
 
+<!-- main TIMELINE WINDOW -->
 
             <div class='MainWrap'>
 
               <div style="display: none" id="geowrap" class='imagewrap'>
                  <img id='Geo' class='green' src='img/Geo_w.png' alt='Geography'>
-                 <!-- <a href="https://en.wikipedia.org/wiki/Skopje" style="width:160px; height:110px; border:0; background-color: blue; position: absolute; top: 203px; left: 160px;"></a> -->
-                 <a class='Skopje' href="#" data-info="skopje"></a>
-                 <a class='Vienna' href="#" data-info="Vienna"></a>
-                 <a class='London' href="#" data-info="London"></a>
-                 <a class='Paris' href="#" data-info="Paris"></a>
-                 <a class='SanFrancisco' href="#" data-info="SanFrancisco"></a>
+                   <a class='Skopje' href="#" data-info="skopje"></a>
+                   <a class='Vienna' href="#" data-info="Vienna"></a>
+                   <a class='London' href="#" data-info="London"></a>
+                   <a class='Paris' href="#" data-info="Paris"></a>
+                   <a class='SanFrancisco' href="#" data-info="SanFrancisco"></a>
               </div>
 
-              <div style="display: none" class='imagewrap'>
+
+
+              <div style="display: none" id="peoplewrap" class='imagewrap'>
                 <img id='People' class='lightgreen' src='img/People.png' alt='People'>
+                    <a class='Mama' href="#" data-info="Mama"></a>
+                    <a class='Tato' href="#" data-info="Tato"></a>
+                    <a class='Igor' href="#" data-info="Igor"></a>
+                    <a class='Dedo' href="#" data-info="Dedo"></a>
+                    <a class='Baba' href="#" data-info="Baba"></a>
+                    <a class='Bibi' href="#" data-info="Bibi"></a>
+                    <a class='IgorBaci' href="#" data-info="IgorBaci"></a>
+                    <a class='Efremenko' href="#" data-info="Efremenko"></a>
+                    <a class='Palco' href="#" data-info="Palco"></a>
+                    <a class='Borela' href="#" data-info="Borela"></a>
+                    <a class='TacNac' href="#" data-info="TacNac"></a>
+                    <a class='Eric' href="#" data-info="Eric"></a>
               </div>
-              <div style="display: none" class='imagewrap'>
+
+              <div style="display: none" id="artscraftswrap" class='imagewrap'>
                <img id='ArtsCrafts' class='orange' src='img/ArtsCrafts.png' alt='ArtsCrafts'>
-             </div>
-               <img style="display: none" id='Publications' class='yellow' src='img/Publications.png' alt='Publications'>
-               <div style="display: none" id='workwrap' class="imagewrap">
+                  <a class='Rice' href="#" data-info="Rice"></a>
+              </div>
+
+              <div style="display: none" id="publicationswrap" class='imagewrap'>
+                <img id='Publications' class='red' src='img/Publications.png' alt='Publications'>
+              </div>
+
+              
+              <div style="display: none" id='workwrap' class="imagewrap">
                 <img  id='Work' class='darkgreen' src='img/Work.png' alt='Work'>
-<!--                  <a class='Skopje' href="#" data-info="skopje"></a>
-                 <a class='Vienna' href="#" data-info="Vienna"></a>
-                 <a class='London' href="#" data-info="London"></a>
-                 <a class='Paris' href="#" data-info="Paris"></a>
-                 <a class='SanFrancisco' href="#" data-info="SanFrancisco"></a> -->
-               </div>
-               
-               <img style="display: none" id='Talks' class='red' src='img/Talks.png' alt='Talks'>
-               <!-- <img id='year1965' src='img/1965.png' alt='1965' width="500"> -->
-           </div>
-           <!--  -->
+                  <a class='TEDx' href="#" data-info="TEDx"></a>
+                  <!-- <iframe src="https://www.youtube.com/watch?v=pifbN446lQc"></iframe> -->
+              </div>
+
+             <div style="display: none" id='animalwrap' class="imagewrap">
+                <img  id='Animals' class='yellow' src='img/Animals.jpg' alt='Animals'>
+              </div>
+
+             </div>
+
+
+         
            <p id='year1965'> 1965</p>
            <p id='year2016'> 2016</p>
            <p>
-            <a class="resumebutton" href="Wildcattat_Resume/resume.html">RESUME</a>
+            <a class="resumebutton" target="_blank" href="Wildcattat_Resume/resume.html">RESUME</a>
           </p>
           
-
-
-<!--           <div class='Skopje'>
-              <img src="img/Skopje.jpg" alt="">
-              <p class='SkopjeText'>
-                Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...
-              </p>
-            </div> -->
-
-
 
             <div class="overlay-background"></div>
             <div class='modal'></div>
@@ -118,10 +132,8 @@
               <a class='close' href="">X</a>
               <img src="{{src}}" alt="">
               <p class='modaltext'>{{text}}</p>
-              <a class='address' href="{{hyperlink}}" target="_blank">{{hyperlinkText}}</a>
+              <a class='address' target="_blank" href="{{hyperlinkMap}}">More info and links</a>
             </script>
-
-
 
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

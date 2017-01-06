@@ -1,8 +1,5 @@
 
-// make all images and menus i need invisible so they can Fadein later. ( i tried opacity, it doesnt work on all use cases)
-// $('.filters').hide();
-// $('#year1965').hide();
-// $('#year2016').hide();
+// fading in Image
 $('.TanjaImage').fadeIn(1000);
 // $('.Boss').hide();
 
@@ -40,12 +37,16 @@ $(document).keydown(function(e) {
     $(document).unbind('keydown',arguments.callee);
     
     // Add your own easter egg here!!
-    $('.Bossjumping').fadeIn();
-    $('.Boss').toggleClass('Bossjumping');
-    
+        $('.Bossjumping').fadeIn();
+        $('.Boss').toggleClass('Bossjumping');
+
+   
+
     setInterval(function () {
+        $('audio').fadeIn();
         $('.Boss').toggleClass('Bossjumping');
     }, 2000);}
+    
 });
 
 $('.Boss').on('click', function(){
@@ -55,24 +56,24 @@ $('.Boss').on('click', function(){
 // on click of the nav tabs, different timeline images should appear and the previous image should dissapear
 
 $('li.green').on("click", function (){
-    $('.imagewrap').hide();
-    // the line below is to avoid th eslider showing
+    // hide any previous timelineimage
+     $('.imagewrap').hide();
+    // prevent the slider to show
     $('.MainWrap').show();  
+    // display the timeline image
     $('#geowrap').show();
-    // to minimize the nav bar on click
+    // minimize the nav bar on click
     $('.filters').addClass('navMin');
-    // $('p.resumebutton').hide();
+    // hide  the resume button
     $('a.resumebutton').hide();
 
 
 });
 
 $('li.lightgreen').on("click", function (){
-    // With the line below i want to delete any previous image - so i want a syntax that says hide any existing image (any siblings) so to put a new one in th enext line
-    $('.MainWrap').find('img').hide();
+    $('.imagewrap').hide();
     $('.MainWrap').show(); 
-    $('#People').show();
-    // minimize the nav bar
+    $('#peoplewrap').show();
     $('.filters').addClass('navMin');
     $('a.resumebutton').hide();
 
@@ -81,29 +82,43 @@ $('li.lightgreen').on("click", function (){
 });
 
 $('li.darkgreen').on("click", function (){
-    // With the line below i want to delete any previous image - so i want a syntax that says hide any existing image (any siblings) so to put a new one in th enext line
     $('.imagewrap').hide();
-    // $('.MainWrap').find('img').hide();
-    $('.MainWrap').show(); 
+    $('.MainWrap').show();
     $('#workwrap').show();
-    // minimize the nav bar
     $('.filters').addClass('navMin');
-    // $('h1').hide();
     $('a.resumebutton').show();
 
 });
 
 $('li.orange').on("click", function (){
-    // With the line below i want to delete any previous image - so i want a syntax that says hide any existing image (any siblings) so to put a new one in th enext line
-    // $('.MainWrap').find('img').hide();
+    $('.imagewrap').hide();
     $('.MainWrap').show(); 
-    $('#ArtsCrafts').show();
-    // minimize the nav bar
+    $('#artscraftswrap').show();
     $('.filters').addClass('navMin');
-    // $('h1').hide();
-    $('a.resumebutton').show();
+    $('a.resumebutton').hide();
 
 });
+
+$('li.yellow').on("click", function (){
+    
+    $('.MainWrap').show(); 
+    $('#animalwrap').show();
+    $('.filters').addClass('navMin');
+    $('a.resumebutton').hide();
+
+});
+
+$('li.red').on("click", function (){
+    
+    $('.MainWrap').show(); 
+    $('#publicatoinswrap').show();
+    $('.filters').addClass('navMin');
+    $('a.resumebutton').hide();
+
+});
+
+// the below is generalisation for all Timeline filters. it uses handlebars
+
 
 $('.imagewrap a').on("click", function (e){
     e.preventDefault();
@@ -121,53 +136,92 @@ $('.imagewrap a').on("click", function (e){
     $('.modal').fadeIn();
 });
 
-// the above will repeat from all Timeline filters
-
-
-$('.modal').on('click', '.close', function(e){
-    e.preventDefault();
-    $('.modal').fadeOut();
-    // $('.modal').html(htmlToHide);
-    console.log('this works');
-});
-
-// the below is to make the nav menu minimize and maximize on hover.  it works but i have to figure out how to make it maximize only when hovering over the small minimized portion of it as now it maximisez when i am anywhere in teh proximity which is not what i want
-
-$('.filters li').on('mouseenter', function(){
-    $('.filters').removeClass('navMin');
-    // $('.MainWrap').addClass('opacity50');
-});
-
 
 var imageInfo = {
     skopje: {
         src: 'img/Skopje.jpg',
         text: 'Skopje used to be a pretty subtle quiet lovely city..Until the Gang of bandits took over. As a result of their stupidity, ignorance, greed and unlimited criminal minds...',
-        hyperlink: 'https://goo.gl/maps/XqqpJYzqXwT2',
-        hyperlinkText: 'Hello'
+        hyperlinkMap: 'https://drive.google.com/open?id=1d7ulIAF7jG3AQGggdo1pH7Z_asU&usp=sharing'
     },
-    
+
     Vienna: {
         src: 'img/Vienna.jpg',
-        text: 'Ultravox...ah, Vienna '
+        text: 'Ultravox...ah, Vienna ',
+        hyperlinkMap: 'https://goo.gl/maps/XqqpJYzqXwT2'
     },
 
     London: {
         src: 'img/London.jpg',
-        text: 'Battersea Power Station forever '
+        text: 'Battersea Power Station forever ',
+        hyperlinkMap: 'https://goo.gl/maps/XqqpJYzqXwT2'
     },
     Paris: {
         src: 'img/Paris.jpg',
-        text: 'Paris, i will see you again!'
+        text: 'Paris, i will see you again!',
+        hyperlinkMap: 'https://goo.gl/maps/XqqpJYzqXwT2'
     },
      SanFrancisco: {
         src: 'img/SanFrancisco.jpg',
-        text: 'San Francisco, you city of contrasts!'
+        text: 'San Francisco, you city of contrasts!',
+        hyperlinkMap: 'https://goo.gl/maps/XqqpJYzqXwT2'
+    },
+
+       TEDx: {
+        src: 'img/TEDx.jpg',
+        text: 'TEDx Sonoma 2015',
+        hyperlinkMap: 'https://www.youtube.com/watch?v=pifbN446lQc'
+    },
+     Mama: {
+        src: 'img/Mama.jpg',
+        text: 'ANCHE DZAMBAZOVA, my Mom, the most humble Champion in everything',
+        hyperlinkMap: 'http://www.imdb.com/name/nm1359428/'
+    },
+
+    Tato: {
+        src: 'img/Tato.jpg',
+        text: 'ALEKSANDAR DZAMBAZOV, my Dad, the last naive romantic...',
+        hyperlinkMap: 'https://www.youtube.com/watch?v=B1KUKOECo4k'
+    },
+
+      Igor: {
+        src: 'img/Igor.jpg',
+        text: 'IGOR DZAMBAZOV, my brother, couldnt get more talent in one person',
+        hyperlinkMap: 'http://www.imdb.com/name/nm0246081/'
+    },
+
+     Dedo: {
+        src: 'img/Dedo.jpg',
+        text: 'PETRE PRLICHKO, my Grandfather, the greatest actor ever',
+        hyperlinkMap: 'https://mk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%82%D1%80%D0%B5_%D0%9F%D1%80%D0%BB%D0%B8%D1%87%D0%BA%D0%BE'
+    },
+
+    Rice: {
+        src: 'img/Rice.jpg',
+        text: 'RICE, Film by Alex Vargas, 2017',
+        hyperlinkMap: 'http://ricethemovie.com/'
     }
+    
 }
 
 
-// console.log(geographyInfo.people);
+
+// closing button for the expanded images and transparency
+
+$('.modal').on('click', '.close', function(e){
+    e.preventDefault();
+    $('.modal').fadeOut();
+    $('.imagewrap').removeClass('overlay-background');
+    console.log('this works');
+});
+
+
+//make the nav menu minimize and maximize on hover.  it works but i have to figure out how to make it maximize only when hovering over the small minimized portion of it as now it maximisez when i am anywhere in teh proximity which is not what i want
+
+$('.filters li').on('mouseenter', function(){
+    $('.filters').removeClass('navMin');
+    // $('.MainWrap').addClass('opacity50');
+});
+// console.log(imageInfo.people);
 // this will be the section of Image maps - when click on different image maps in the images, they should open separately and i need an X sign to be able to minimize them. have =nt yet started that
 
 

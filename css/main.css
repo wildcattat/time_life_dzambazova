@@ -348,7 +348,10 @@ h1 {
     color: transparent;
 }
 
-
+@font-face{
+  font-family:'Ando';
+  src: url('fonts/Ando.otf');
+}
 
 #year1965 {
     /* opacity: 1; */
@@ -358,7 +361,7 @@ h1 {
     position: fixed;
     top: 200px;
     left: 30px;
-    font-family: 'ando';
+    font-family: 'Ando';
 
 }
 
@@ -370,7 +373,7 @@ h1 {
     position: fixed;
     top: 200px;
     right: 30px;
-    font-family: 'ando';
+    font-family: 'Ando';
 }
 
 
